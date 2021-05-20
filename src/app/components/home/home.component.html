@@ -1,57 +1,94 @@
 <div class="jumbotron bg-white text-center">
     <h1 class="display-4">Covid-19 Tracker</h1>
     <hr>
-    <div class="row">
- 
-        <div class="card col p-3 m-3">
-            <div class="ui statistic">
-                <div class="label">
-                  Total Confirmed
+
+   <div class="grid-container">
+    
+    <div class="grid-child">
+        <!-- <p>List of Countries</p> -->
+        <a class="ui label" style="width:-webkit-fill-available">
+            <img class="ui right spaced avatar image" >
+            List of Countries
+          </a>
+        <div class="ui middle aligned selection animated list anyClass">
+            <div class="item">
+                <div class="content" >
+                  
+                  <div class="header d-flex p-2 "  >Worldwide</div>
                 </div>
-                <div class="value">
-                  {{totalConfirmed}}
+            </div>
+            <div class="item" *ngFor="let item of countries">
+                <div class="content" >
+                  <div class="header d-flex p-2 "  >{{item}}</div>
                 </div>
-              </div>
-
-        </div>
-
-        <div class="card col p-3 m-3">
-            <div class="ui statistic">
-                <div class="label">
-                  Total Active Cases
-                </div>
-                <div class="value">
-                    {{totalActive}}
-                </div>
-              </div>
-
-        </div>
-
-        <div class="card col p-3 m-3">
-            <div class="ui statistic">
-                <div class="label">
-                  Total Recovered
-                </div>
-                <div class="value">
-                    {{totalRecovered}}
-                </div>
-              </div>
-
-        </div>
-
-        <div class="card col p-3 m-3">
-            <div class="ui statistic">
-                <div class="label">
-                  Total Death
-                </div>
-                <div class="value">
-                    {{totalDeath}}
-              </div>
-
-        </div>
-
-      
-        
+            </div>
+          
+          </div>
+  
     </div>
- 
+    
+    <div class="grid-child">
+        <div class="row">
+     
+            <div class="card col p-3 m-3">
+                <div class="ui  statistic">
+                    <div class="label">
+                      Total Confirmed
+                    </div>
+                    <div class="value">
+                      {{totalConfirmed}}
+                    </div>
+                  </div>
+    
+            </div>
+    
+            <div class="card col p-3 m-3">
+                <div class="ui statistic">
+                    <div class="label">
+                      Total Active Cases
+                    </div>
+                    <div class="value">
+                        {{totalActive}}
+                    </div>
+                  </div>
+    
+            </div>
+    
+            <div class="card col p-3 m-3">
+                <div class="ui statistic">
+                    <div class="label">
+                      Total Recovered
+                    </div>
+                    <div class="value">
+                        {{totalRecovered}}
+                    </div>
+                  </div>
+    
+            </div>
+    
+            <div class="card col p-3 m-3">
+                <div class="ui statistic">
+                    <div class="label">
+                      Total Death
+                    </div>
+                    <div class="value">
+                        {{totalDeath}}
+                  </div>
+    
+            </div>
+    
+          
+            
+        </div>
+     
+    </div>
+    
+    
+    
+    </div>
+   </div> 
+
+
+
+
 </div>

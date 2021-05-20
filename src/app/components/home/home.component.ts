@@ -15,10 +15,8 @@ export class HomeComponent implements OnInit {
   totalDeath = 0;
   totalRecovered = 0;
 
-
-  //globalData!: GlobalDataSummery[];
-
-  //data: any;
+  countries : string[] =[];
+ 
 
   globalData!: GlobalDataSummery[];
   
@@ -37,6 +35,8 @@ export class HomeComponent implements OnInit {
           this.totalActive = result.active,
           this.totalDeath = result.deaths,
           this.totalRecovered = result.recovered
+
+        
           console.log(result);
          
 
@@ -44,6 +44,24 @@ export class HomeComponent implements OnInit {
       }
     )
   
+    this.dataService.getListofCountry()
+    .subscribe(
+      {
+        next: (result =>{
+        
+       
+          this.globalData = result;
+          this.globalData.forEach(cs=>{
+            this.countries.push(cs.country);
+            //this.countries.push(cs.)
+          })
+        
+          console.log(result);
+         
+
+        })
+      }
+    )
    
     
 

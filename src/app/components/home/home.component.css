@@ -1,0 +1,15 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  grid-gap: 20px;
+}
+
+.anyClass {
+  max-height: 670px;
+  overflow-y: scroll;
+  height: min-content;
+}
+
+.labelUI {
+  width: -webkit-fill-available;
+}

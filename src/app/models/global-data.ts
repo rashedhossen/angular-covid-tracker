@@ -1,7 +1,9 @@
 export interface GlobalDataSummery{
-    country ?:string,
+    country :string,
     cases :number,
     deaths  : number,
     recovered  : number,
-    active : number
+    active : number,
+  
+
 }
