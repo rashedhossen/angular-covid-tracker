@@ -53,14 +53,18 @@ export class HomeComponent implements OnInit {
           this.globalData = result;
           this.globalData.forEach(cs=>{
             this.countries.push(cs.country);
-            //this.countries.push(cs.)
+           
           })
         
           console.log(result);
          
 
         })
+
+        
       }
+
+     
     )
    
     
@@ -68,4 +72,8 @@ export class HomeComponent implements OnInit {
 
   }
 
+  myFunction(country:any)  {
+    alert(country)
+   }
+  
 }

@@ -11,15 +11,15 @@
             List of Countries
           </a>
         <div class="ui middle aligned selection animated list anyClass">
-            <div class="item">
+            <div class="item sticky-top bg-light text-dark">
                 <div class="content" >
                   
-                  <div class="header d-flex p-2 "  >Worldwide</div>
+                  <div class="header d-flex p-2"  > <i class="globe icon"></i>Worldwide</div>
                 </div>
             </div>
             <div class="item" *ngFor="let item of countries">
                 <div class="content" >
-                  <div class="header d-flex p-2 "  >{{item}}</div>
+                  <div class="header d-flex p-2 " ><p  (click) = myFunction(item)>{{item}}</p></div>
                 </div>
             </div>
           
