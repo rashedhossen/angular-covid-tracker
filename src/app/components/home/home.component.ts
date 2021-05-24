@@ -73,7 +73,18 @@ export class HomeComponent implements OnInit {
   }
 
   myFunction(country:any)  {
-    alert(country)
+
+    this.globalData.forEach(cs=>{
+      if(cs.country == country){
+        
+        this.totalConfirmed = cs.cases,
+        this.totalActive = cs.active,
+        this.totalDeath = cs.deaths,
+        this.totalRecovered = cs.recovered
+      }
+    })
+
+    //alert(country)
    }
   
 }
