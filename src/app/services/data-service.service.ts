@@ -9,11 +9,15 @@ import {Observable, observable} from 'rxjs';
 export class DataServiceService {
 
  
+  //let wordlwide 
 
   private globalDataUrlCountryWise = `https://api.caw.sh/v3/covid-19/countries`
-  //private globalDataUrl = `https://api.caw.sh/v3/covid-19/all`
-  private globalDataUrl = `https://api.caw.sh/v3/covid-19/countries`
+  private globalDataUrl = `https://api.caw.sh/v3/covid-19/all`
+ // private globalDataUrl = `https://api.caw.sh/v3/covid-19/countries`
   
+
+
+
   
   constructor(private http: HttpClient) { }
 
