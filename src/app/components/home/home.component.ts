@@ -27,6 +27,12 @@ export class HomeComponent implements OnInit {
 
   }
 
+  columnChart : GoogleChartInterface = {
+    chartType : 'ColumnChart'
+
+  }
+
+  
 
 
    constructor(private dataService : DataServiceService) { }
@@ -88,10 +94,11 @@ export class HomeComponent implements OnInit {
   initCountryChart(){
 
     let datatable = [];
-    datatable.push(["Country","Cases"])
-    this.countryWiseData.forEach(cs=>{
+    datatable.push(["Country","Death"])
+    this.countryWiseData.forEach(cs => {
+      if(cs.deaths > 90000)
       datatable.push([
-        cs.country , cs.active
+        cs.country , cs.deaths 
       ])
     })
     console.log(datatable);
@@ -100,29 +107,44 @@ export class HomeComponent implements OnInit {
       chartType: 'PieChart',
       dataTable: datatable,
       //firstRowIsData: true,
-      options: {'Country': 'Cases'},
+      options: {
+        // 'Country': 'Cases'
+        height:500
+      },
     };
-  }
 
-
-  initChart(){
-
-    let datatable = [];
-    datatable.push(["Country","Cases"])
-    this.globalData.forEach(cs=>{
-      datatable.push([
-        cs.country , cs.active
-      ])
-    })
-    console.log(datatable);
-
-    this.pieChart = {
-      chartType: 'PieChart',
+    this.columnChart = {
+      chartType: 'ColumnChart',
       dataTable: datatable,
-      //firstRowIsData: true,
-      options: {'Country': 'Cases'},
+     
+      options: {
+        // 'Country': 'Cases'
+       
+        height: 500,
+        
+      },
     };
   }
+
+
+  // initChart(){
+
+  //   let datatable = [];
+  //   datatable.push(["Country","Cases"])
+  //   this.globalData.forEach(cs=>{
+  //     datatable.push([
+  //       cs.country , cs.active
+  //     ])
+  //   })
+  //   console.log(datatable);
+
+  //   this.pieChart = {
+  //     chartType: 'PieChart',
+  //     dataTable: datatable,
+  //     //firstRowIsData: true,
+  //     options: {'Country': 'Cases'},
+  //   };
+  // }
 
 
 
