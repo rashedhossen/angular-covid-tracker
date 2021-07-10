@@ -76,9 +76,9 @@ export class HomeComponent implements OnInit {
       {
         next: (result =>{
 
+         
 
           self.countryWiseData = result;
-          //this.globalData.push(result);
           self.countryWiseData.forEach(cs=>{
             self.countries.push(cs.country);
 
@@ -127,24 +127,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  // initChart(){
-
-  //   let datatable = [];
-  //   datatable.push(["Country","Cases"])
-  //   this.globalData.forEach(cs=>{
-  //     datatable.push([
-  //       cs.country , cs.active
-  //     ])
-  //   })
-  //   console.log(datatable);
-
-  //   this.pieChart = {
-  //     chartType: 'PieChart',
-  //     dataTable: datatable,
-  //     //firstRowIsData: true,
-  //     options: {'Country': 'Cases'},
-  //   };
-  // }
+  
 
 
 
@@ -162,7 +145,7 @@ export class HomeComponent implements OnInit {
       }
     })
 
-    console.log(country);
+    //console.log(country);
 
    }
 
